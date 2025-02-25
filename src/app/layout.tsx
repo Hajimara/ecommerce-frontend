@@ -1,8 +1,9 @@
+import './globals.css';
+
 import { Noto_Sans_KR } from 'next/font/google';
+import { ReactNode } from 'react';
 
 import type { Metadata } from 'next';
-
-import './globals.css';
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'], // 기본 설정
@@ -18,10 +19,10 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
-    <html lang="kr">
+    <html lang="ko">
       <body className={`${notoSansKR.variable} antialiased`}>{children}</body>
     </html>
   );

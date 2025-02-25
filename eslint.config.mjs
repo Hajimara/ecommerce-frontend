@@ -15,7 +15,8 @@ const eslintConfig = [
     'next/typescript',
     'next',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended'
   ),
   {
     rules: {
