@@ -33,6 +33,7 @@ const eslintConfig = [
           'newlines-between': 'always',
         },
       ],
+      'tailwindcss/no-custom-classname': 'off',
       'react/react-in-jsx-scope': 'off', // ✅ Next.js에서는 필요 없음
       'react/jsx-props-no-spreading': 'off', // ✅ JSX에서 props spreading 허용
       'import/prefer-default-export': 'off', // ✅ 단일 export 사용 가능

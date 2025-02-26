@@ -28,7 +28,10 @@ function Layout({ children }: LayoutProps) {
         <div className={'mt-4 flex w-full max-w-[1050px] justify-between '}>
           <div>category</div>
           <nav className="space-x-20">
-            <Link href="/main" className="hover:opacity-80">
+            <Link
+              href="/src/app/(filter_layout)/main"
+              className="hover:opacity-80"
+            >
               홈
             </Link>
             <Link href="#" className="hover:opacity-80">
