@@ -1,7 +1,6 @@
 import { ReactNode } from 'react';
 
 import cn from '@/utils/cn';
-
 import CloseIcon from '@/assets/CloseIcon';
 import Typography from '@/components/atom/Typograph';
 
@@ -14,9 +13,9 @@ interface IChipProps {
 }
 
 const variantStyles = {
-  small: 'text-xs px-2 py-1 rounded-md', // 12px
-  medium: 'text-s px-3 py-1.5 rounded-lg', // 14px
-  large: 'text-m px-4 py-2 rounded-xl', // 16px
+  small: 'text-xs px-2 py-0.5 rounded-xl', // 12px
+  medium: 'text-s px-3 py-1 rounded-xl', // 14px
+  large: 'text-m px-4 py-1.5 rounded-xl', // 16px
 } as const; // ✅ as const 추가 (객체를 리터럴 타입으로 제한)
 
 const colorStyles = {

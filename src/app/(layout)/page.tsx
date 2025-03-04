@@ -6,17 +6,16 @@ import Banner from '@/components/molecules/Banner';
 
 function MainPage() {
   const [urlList] = useState<string[]>([
-    '/assets/imgs/banner1.png',
-    '/assets/imgs/banner2.png',
-    '/assets/imgs/banner3.png',
-    '/assets/imgs/banner4.png',
-    '/assets/imgs/banner5.png',
+    '/assets/imgs/banner1.jpg',
+    '/assets/imgs/banner2.jpg',
+    '/assets/imgs/banner3.jpg',
+    '/assets/imgs/banner4.jpg',
   ]);
 
   return (
-    <main>
+    <main className={'min-w-[1050px]'}>
       <Banner urlList={urlList} />
-      <div className="mx-auto w-[1050px] flex-1 p-m">{'hi'}</div>
+      <div className="relative mx-auto w-[1050px] flex-1 p-m">{'hi'}</div>
     </main>
   );
 }

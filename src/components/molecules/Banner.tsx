@@ -1,18 +1,15 @@
 'use client';
 
 import 'swiper/css';
-import 'swiper/css/navigation';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import IconButton from '@/components/atom/IconButton';
 import LeftArrowIcon from '@/assets/LeftArrowIcon';
 import RightArrowIcon from '@/assets/RightArrowIcon';
-import Typography from '@/components/atom/Typograph';
 import Link from '@/components/atom/Link';
-import Chip from '@/components/atom/Chip';
 
 import type { Swiper as SwiperClass } from 'swiper/types';
 
@@ -23,15 +20,10 @@ interface IBannerProps {
 function Banner({ urlList }: IBannerProps) {
   const swiperRef = useRef<SwiperClass | undefined>();
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   return (
     <div
       className={'group relative m-[0px_auto_40px] h-[370px] max-w-[1900px]'}
     >
-      <Chip
-        className={'absolute bottom-1'}
-      >{`${urlList.length} / ${currentIndex + 1}`}</Chip>
       <Swiper
         modules={[Navigation, Autoplay]}
         loop={true} // 무한 루프 활성화
@@ -42,7 +34,7 @@ function Banner({ urlList }: IBannerProps) {
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
         }}
-        onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)} // 현재 슬라이드 인덱스 업데이트
+        // onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)} // 현재 슬라이드 인덱스 업데이트
       >
         {/* 슬라이드 내용 */}
         {urlList.map((item, index) => {
@@ -72,7 +64,7 @@ function Banner({ urlList }: IBannerProps) {
           color: 'white',
         }}
         className={
-          'absolute right-1/2 top-[175] z-10 my-auto ml-0 mr-[590px]  rounded-full bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-50'
+          'absolute left-m top-[175] z-10 my-auto ml-0 mr-[590px]  rounded-full bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-50'
         }
         onClick={() => swiperRef.current?.slidePrev()}
       />
@@ -85,7 +77,7 @@ function Banner({ urlList }: IBannerProps) {
           color: 'white',
         }}
         className={
-          'absolute left-1/2 top-[175] z-10 my-auto ml-[590px] rounded-full bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-50'
+          'absolute right-m top-[175] z-10 my-auto ml-[590px] rounded-full bg-black opacity-0 transition-opacity duration-500 group-hover:opacity-50'
         }
         onClick={() => {
           swiperRef.current?.slideNext();
