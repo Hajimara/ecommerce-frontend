@@ -1,9 +1,6 @@
-interface IIconProps {
-  width?: number;
-  height?: number;
-}
+import { ISvgIconProps } from '@/interface/root';
 
-function SearchIcon({ width = 18, height = 18 }: IIconProps) {
+function SearchIcon({ width = 18, height = 18 }: ISvgIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -98,7 +98,7 @@ function Layout({ children }: LayoutProps) {
       </header>
 
       {/* 메인 컨텐츠 */}
-      <main className="mx-auto w-[1050px] flex-1 p-m">{children}</main>
+      <>{children}</>
     </div>
   );
 }
